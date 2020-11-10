@@ -1,0 +1,53 @@
+	/*Nmame: Ahmed Slah Abdalrhman*/
+	/*specialization: computer engineer*/
+	/*level: sucond*/ 
+	#include <iostream>
+	using namespace std; 
+ int main()  {
+	string x;
+	string name;
+	int id,a,y=1 ,m[8],i;
+	double sum=0,average;
+	for (int u = u; u < 10; u++) 	{
+	cout<<"enter your name: ";
+	cin>>name;
+	cout<<"enter your id: ";
+	cin>>id;
+	cout<<x<<"enter A or T or c ";
+	cin>>x;
+	if(x=="A"){
+	cout<<"control"<<endl;
+	}else if(x=="T"){
+	cout<<"communication"<<endl;
+	}else if(x=="C"){
+	cout<<"computer"<<endl;
+	}cout<<"enter the grade supgeict: ";
+	cin>>a;
+	if((a>=90)&&(a)<=100)
+	cout<<"A";
+	else if((a>=80)&&(a)<90)
+	cout<<"B";
+	else if((a>=70)&&(a)<80)
+	cout<<"C";
+	else if((a>=60)&&(a)<70)
+	cout<<"D";
+	else if((a>=50)&&(a)<60)
+	cout<<"F"<<endl;
+	cout<<"enter scores for 8 subjects:	"<<endl; 		for (i = 0; i < 8; i++)
+	{
+		cin>>m[i]; 	}
+	for (i = 0; i < 8; i++)
+	{
+		sum = sum+m[i]; 	} 	cout<<"Sum: "<<sum<<endl;
+	average=sum/8;
+	cout<<"Average: "<<average<<endl; 
+
+		cout<<"name: "<<name<<endl;
+		cout<<"id: "<<id<<endl;
+		cout<<"Department"<<x<<endl;
+		cout<<"Degree"<<a<<endl;
+	}
+		return 0;	}	
+		
+
+
