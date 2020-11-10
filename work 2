@@ -1,0 +1,46 @@
+/*Nmame: Ahmed Slah Abdalrhman*/
+/*specialization: computer engineer*/                                     /**/
+/*level: sucond*/
+
+#include <iostream>                                 /*ستدعاء لمكتبة الادخال و الاخراج*/                        
+using namespace std;
+
+int main()                                            /*الدالة الرئيسية للبرنام*/
+{
+	string x;                                         /*تعريف المتغيرات*/
+	string name;                   
+	int id,a,y=1 ;	
+	do
+	{
+	cout<<"enter your name: ";      
+	cin>>name;                       
+	cout<<"enter your id: ";                         /*ادخال الاسم والرقم الجامعي*/
+	cin>>id;                         
+	cout<<x<<"enter A or T or c ";
+	cin>>x;
+	if(x=="A"){
+	   cout<<"control"<<endl;
+	}else if(x=="T"){
+	   cout<<"communication"<<endl;
+	}else if(x=="C"){
+	  cout<<"computer"<<endl;
+    }cout<<"enter the grade supgeict: ";
+	cin>>a;
+	if((a>=90)&&(a)<=100)
+	cout<<"A";
+	else if((a>=80)&&(a)<90)
+	cout<<"B";
+	else if((a>=70)&&(a)<80)                            /*ادخال الدرجه واخراج التقدير*/
+	cout<<"C";
+	else if((a>=60)&&(a)<70)
+	cout<<"D";
+	else if((a>=50)&&(a)<60)
+	cout<<"F"<<endl;
+	cout<<"name: "<<name<<endl;
+    cout<<"id: "<<id<<endl;
+    cout<<"Department"<<x<<endl;
+    cout<<"Degree"<<a<<endl;
+    }                                                 
+    while(y==1);                /*الشرط التكراري*/
+	return 0;
+}
