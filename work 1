@@ -1,0 +1,38 @@
+/*Nmame: Ahmed Slah Abdalrhman*/
+/*specialization: computer engineer*/
+/*level: sucond*/
+
+#include <iostream>                                 /*ستدعاء لمكتبة الادخال و الاخراج*/
+using namespace std;/**/
+
+int main()                                         /*الدالة الرئيسية للبرنامج*/
+{
+	string x;                                      /*تعريف المتغيرات*/                     
+	string name;                  
+	int id,a ;	
+	cout<<"enter your name: ";    /**/  
+	cin>>name;                       
+	cout<<"enter your id: ";
+	cin>>id;                                      /*ادخال اسم والرقم الجامعي للمستخدم*/
+	cout<<x<<"enter A or T or c ";
+	cin>>x;
+	if(x=="A"){                                   /**/ 
+	   cout<<"control"<<endl;
+	}else if(x=="T"){
+	   cout<<"communication"<<endl;
+	}else if(x=="C"){
+	  cout<<"computer"<<endl;                      /*اخراج الي اي قسم ينتمي*/ 
+    }cout<<"enter the grade supgeict: ";
+	cin>>a;
+	if((a>=90)&&(a)<=100)
+	cout<<"A";
+	else if((a>=80)&&(a)<90)
+	cout<<"B";
+	else if((a>=70)&&(a)<80)
+	cout<<"C";
+	else if((a>=60)&&(a)<70)
+	cout<<"D";
+	else if((a>=50)&&(a)<60)                        /*ادخال درجه الماده و اخرج المعدل*/ 
+	cout<<"F";
+	return 0;
+}                                                    /*القوس للدلاله على نهايه البرنامج*/ 
