@@ -1,0 +1,700 @@
+# c//الاسم:احمد صلاح عبدالرحمن محمد
+//التخصص:هندسه حاسوب
+//المستوى:الثاني 
+#include <bits/stdc++.h>
+using namespace std;
+class Contact
+{
+	public:
+	int n;
+	string data; 
+	int num;
+	Contact *next;
+ } ;
+
+void push(Contact** head_ref, string new_data){             //    ادراج عقده جديده في مقدمه القائمه باستخدام الاشاره الي راس القائمه 
+    Contact* new_contact = new Contact();                    //حجز موقع العقدة في الذاكرة
+    new_contact->data = new_data;                            //إضافة البيانات
+    new_contact->next = (*head_ref);                         //جعل رأس القائمة هو العقدة التالية للعقدة الجديدة
+    (*head_ref) = new_contact;                               //تحريك رأس القائمة ليشير إلى العقدة الجديدة
+};
+
+void insertAfter (Contact* prev_contact, string new_data){ //إدراج عقدة بعد العقدة السابقة المعطاة
+    if (prev_contact == NULL){                                //nullالتحقق من أنّ العقدة السابقة المعطاة تحمل القيمة
+		cout<<"the given previous node cannot be NULL";         
+        return;
+    }
+    Contact* new_contact = new Contact();                        //حجز موقع العقدة الجديدة في الذاكرة
+    new_contact->data = new_data;                                //إضافة البيانات
+    new_contact->next = prev_contact->next;                      //جعل العقدة اللاحقة للعقدة الجديدة هي العقدة اللاحقة للعقدة السابقة
+    prev_contact->next = new_contact;                            //تحريك العقدة التالية للعقدة السابقة لتصبح العقدة الجديدة
+};
+
+void append(Contact** head_ref, string new_data){       //إلحاق عقدة جديدة في نهاية القائمة
+    Contact* new_contact = new Contact();                         //حجز موقع العقدة الجديدة في الذاكرة
+    Contact *last = *head_ref;                                   
+    new_contact->data = new_data;                                  //إدراج البيانات
+    new_contact->next = NULL;                                      //ستكون العقدة الجديدة هي العقدة الأخير في القائمة
+    if (*head_ref == NULL){                                        //اذا كانت القائمه فارغهستكون العقده الجديده في راس القائمه
+        *head_ref = new_contact;                         
+        return;
+    }
+    while (last->next != NULL)                                      //وإن لم تكن القائمة فارغة ننقل العقدة الجديدة إلى نهاية القائمة
+        last = last->next;
+        last->next = new_contact;                                   //نغير العقدة اللاحقة للعقدة الأخيرة
+        return;
+       
+    
+};
+
+
+
+
+ void printList(Contact *n)                            //تطبع هذه الداله محتويات القائمه بدا من راس القائمه
+{ 
+	while (n != NULL) 
+	{ 
+		cout << n->data << " "<<"\n \n"; 
+		n = n->next; 
+	} 
+} 
+ int main()
+ {
+ 
+ string A, B,J,  H, G;	
+ //قائمه مترابطه تمتلك 51 عقده
+ 	Contact* head=NULL;
+ 	Contact* second=NULL;
+ 	Contact* third=NULL;
+ 	Contact* Four = NULL;
+    Contact* Five = NULL;
+    Contact* Six = NULL;
+    Contact* Seven = NULL;
+    Contact* Eight = NULL;
+    Contact* Nine = NULL;
+    Contact* Ten = NULL;
+    Contact* Eleven = NULL;
+    Contact* Twelve = NULL;
+    Contact* Thirteen = NULL;
+    Contact* Fourteen = NULL;
+    Contact* Fifteen = NULL;
+    Contact* Sixteen = NULL;
+    Contact* seventeen = NULL;
+    Contact* eighteen = NULL;
+    Contact* nineteen = NULL;
+    Contact* Twenty = NULL;
+    Contact* twentyone = NULL;
+    Contact* twentytwo = NULL;
+    Contact* twentythree = NULL;
+    Contact* twentyfour = NULL;
+    Contact* twentyfive = NULL;
+    Contact* twentysix = NULL;
+    Contact* twentyseven = NULL;
+    Contact* twentyeight = NULL;
+    Contact* twentyNin = NULL;
+    Contact* thirty = NULL;
+    Contact* thirtyone = NULL;
+    Contact* thirtytwo = NULL;
+    Contact* thirtythree = NULL;
+    Contact* thirtyfour = NULL;
+    Contact* thirtyfive = NULL;
+    Contact* thirtysix = NULL;
+    Contact* thirtySeven = NULL;
+    Contact* thirtyeight = NULL;
+    Contact* thirtynine = NULL;
+    Contact* forty = NULL;
+    Contact* fortyone = NULL;
+    Contact* fortytwo = NULL;
+    Contact* fortythree = NULL;
+    Contact* fortyfour = NULL;
+    Contact* fortyfive = NULL;
+    Contact* fortysix = NULL;
+    Contact* fortyseven = NULL;
+    Contact* fortyeight = NULL;
+    Contact* Fortynine = NULL;
+    Contact* Fifty = NULL;
+    Contact* fiftyone = NULL;
+    
+// حجز مواقع ل51 عقده 
+    head = new Contact();
+    second = new Contact();                                
+    third = new Contact();
+    Four = new Contact();
+    Five = new Contact();
+    Six = new Contact();
+    Seven = new Contact();
+    Eight = new Contact();
+    Nine = new Contact();
+    Ten = new Contact();
+    Eleven = new Contact();
+    Twelve = new Contact();
+    Thirteen = new Contact();
+    Fourteen = new Contact();
+    Fifteen = new Contact();
+    Sixteen = new Contact();
+    seventeen = new Contact();
+    eighteen = new Contact();
+    nineteen = new Contact();
+    Twenty = new Contact();
+    twentyone = new Contact();
+    twentytwo = new Contact();
+    twentythree = new Contact();
+    twentyfour = new Contact();
+    twentyfive = new Contact();
+    twentysix = new Contact();
+    twentyseven = new Contact();
+    twentyeight = new Contact();
+    twentyNin = new Contact();
+    thirty = new Contact();
+    thirtyone = new Contact();
+    thirtytwo = new Contact();
+    thirtythree = new Contact();
+    thirtyfour = new Contact();
+    thirtyfive = new Contact();
+    thirtysix = new Contact();
+    thirtySeven = new Contact();
+    thirtyeight = new Contact();
+    thirtynine = new Contact();
+    forty = new Contact();
+    fortyone = new Contact();
+    fortytwo = new Contact();
+    fortythree = new Contact();
+    fortyfour = new Contact();
+    fortyfive = new Contact();
+    fortysix = new Contact();
+    fortyseven = new Contact();
+    fortyeight = new Contact();
+    Fortynine = new Contact();
+    Fifty = new Contact();
+    fiftyone = new Contact();
+
+ 	
+ 	
+    head->data="Name: ahmed ";                 //الاسم  // نسند قيمة إلى العقدة الأولى
+    head->next=second;                         //نربط العقدة الأولى بالثانية
+
+    second->data="Given Name:  ";              //إسناد قيمة إلى العقدة الثانية
+    second->next=third;                        //ربط العقدة الثانية بالثالثة
+
+    third->data="enter Additional Name: ";       //??          //اسناد قيمة إلى العقدة الثالثه
+    third->next=Four;                                          //ربط العقدة الثالثه بالرابعه
+
+    Four->data="enter Family Name:جقلاب ";
+    Four->next=Five;
+
+    Five->data="Yomi Name: ";                     //??
+    Five->next=Six;
+
+    Six->data="enter Given Name Yomi: ";         //??
+    Six->next=Seven;
+
+    Seven->data="Additional Name Yomi: ";           //??
+    Seven->next=Eight;
+
+    Eight->data="Family Name Yomi: ";     //??
+    Eight->next=Nine;
+
+    Nine->data="enter Name Prefix: A ";           //
+    Nine->next=Ten;
+
+    Ten->data="Name Suffix: d ";                  //
+    Ten->next=Eleven;
+    
+    Eleven->data="initials: AS ";          //توقيع مختصر للاسم
+    Eleven->next=Twelve;
+    
+    Twelve->data="Nickname : rksha";      //الكنيه (اللقب)                
+    Twelve->next=Thirteen;
+    
+    Thirteen->data="shortname: ";    //الاسم المختصر     
+    Thirteen->next=Fourteen;
+
+    Fourteen->data="maiden Name: ";       //اسم الزوجه
+    Fourteen->next=Fifteen;
+
+    Fifteen->data="birthday: 1.1.1998 ";   //يوم الميلاد
+    Fifteen->next=Sixteen;
+
+    Sixteen->data="gender: male";  //نوع الجنس(مزكر او مؤانس)
+    Sixteen->next=seventeen;
+
+    seventeen->data="location: alkhrtom ";   //موقعك (مكان السكن)
+    seventeen->next=eighteen;
+
+    eighteen->data="billing information: ";         //؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟ معلومات الفواتير ؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟
+    eighteen->next=nineteen;
+
+    nineteen->data="director serve: ";     //؟؟؟؟؟؟؟؟؟؟؟؟؟دليل الخدمه؟؟؟؟؟؟؟؟؟؟؟؟
+    nineteen->next=Twenty;
+
+    Twenty->data="mileage: ";       //؟؟؟؟؟؟؟عدد الاميال؟؟؟؟؟؟؟؟؟
+    Twenty->next=twentyone;
+
+    twentyone->data="occupattion: ";    //ادخال المهنه
+    twentyone->next=twentytwo;
+
+    twentytwo->data="hobby: foot ball  ";        //ادخال الهوايه
+    twentytwo->next=twentythree;
+
+    twentythree->data="sensitvity: ";   //؟؟؟؟؟؟الحساسيه؟؟؟؟؟؟؟
+    twentythree->next=twentyfour;
+
+    twentyfour->data="priority: ";  //؟؟؟؟؟؟افضليه؟؟؟؟؟؟؟
+    twentyfour->next=twentyfive;
+
+    twentyfive->data="subject: ";   //؟؟؟؟؟؟موضوع؟؟؟؟
+    twentyfive->next=twentysix;
+
+    twentysix->data="notes: ";    //؟؟؟؟؟؟؟؟؟مسوده او نوته؟؟؟؟؟؟
+    twentysix->next=twentyseven;
+    
+
+
+    twentyseven->data="Language: arbic";      //
+    twentyseven->next=twentyeight;                 
+    
+    twentyeight->data="Photo: ";         //???????
+    twentyeight->next=twentyNin;
+    
+    twentyNin->data="Group Membership: medium";    //
+    twentyNin->next=thirty;
+    
+    thirty->data="E-mail 1 - Type: gmail";
+    thirty->next=thirtyone;
+    
+    thirtyone->data="E-mail 1 - Value: rksha91@gmail.com";
+    thirtyone->next=thirtytwo;
+    
+    thirtytwo->data="E-mail 2 - Type: none";
+    thirtytwo->next=thirtythree;
+    
+    thirtythree->data="E-mail 2 - Value: none";
+    thirtythree->next=thirtyfour;
+    
+    //thirtyfour->data="Phone 1 - Type: Mobile";
+    //thirtyfour->next=thirtyfive;
+    
+    // thirtyfive->data="Phone 1 - Value: 0904777732";
+    // thirtyfive->next=thirtysix;
+    
+    // thirtySixth->data="Phone 2 - Type: Mobile";
+    // thirtySixth->next=thirtySeven;
+    
+    // thirtySeven->data="Phone 2 - Value: 0114199169";
+    // thirtySeven->next=thirtyeight;
+    
+    // thirtyeight->data="Phone 3 - Type: none";
+    // thirtyeight->next=thirtynine;
+    
+    // thirtynine->data="Phone 3 - Value: none";
+    // thirtynine->next=forty;
+    
+    // forty->data="Phone 4 - Type: none";
+    // forty->next=fortyone;
+    
+    // fortyone->data="Phone 4 - Value: none";
+    // fortyone->next=fortytwo;
+    
+    // fortytwo->data="Organization 1 - Type:none";
+    // fortytwo->next=fortythree;
+    
+    // fortythree->data="Organization 1 - Name: none";
+    // fortythree->next=fortyfour;
+    
+    // fortyfour->data="Organization 1 - Yomi Name:none";
+    // fortyfour->next=fortyfive;
+    
+    // fortyfive->data="Organization 1 - Title: none";
+    // fortyfive->next=fortysix;
+    
+    // fortysix->data="Organization 1 - Department:  none ";
+    // fortysix->next=fortyseven;
+    
+    // fortyseven->data="Organization 1 - Symbol: none";
+    // fortyseven->next=fortyeight;
+    
+    // fortyeight->data="Organization 1 - Location:none";
+    // fortyeight->next=Fortynine;
+    
+    // Fortynine->data="Organization 1 - Job Description:non ";
+    // Fortynine->next=Fifty;
+	
+    // Fifty->data="Website 1 - Type: none";
+    // Fifty->next=fiftiethFirst;
+    
+    // fiftyone->data="Website 1 - Value: none";                         //اسناد قيمة إلى العقدة الواحد وخمسين
+    // fiftyone->next=NULL;                                              //ربط العقدة  بالقيمه نل
+    
+    
+    
+    	printList(head); 
+    	
+    	
+    	cout<<"Which operation do you want to do?\n(add, delete, edit, combine, search): \n";
+    cin>> A;
+    if (A == "add"){
+        cout<<"do you want to push, insert after, append: ";
+        cin>> B;
+        if (B == "push"){
+            cout<<"Insert your field: ";
+            cin>> J;
+            push(&head, J);cout<<endl;
+        }else if(B == "insert after"){
+            cout<<"Insert your field: ";
+            cin>> G;
+            insertAfter(head->next, G);cout<<endl;
+        }else if (B == "append"){
+            cout<<"Insert your field: ";
+            cin>> H;
+            append(&head, H);cout<<endl;
+        }
+    }
+    	printList(head); 
+
+
+    
+    
+    
+
+
+void create()                       //
+{
+     file pointer
+    fstream fout;
+
+    opens an existing csv file or creates a new file.
+    fout.open("reportcard.csv", ios::out | ios::app);
+
+    cout << "Enter the details of 5 students:"
+         << " roll name maths phy chem bio";
+    << endl;
+
+    int i, roll, phy, chem, math, bio;
+    string name;
+
+     Read the input
+    for (i = 0; i < 5; i++) {
+
+        cin >> roll
+            >> name
+            >> math
+            >> phy
+            >> chem
+            >> bio;
+
+        Insert the data to file
+        fout << roll << ", "
+             << name << ", "
+             << math << ", "
+             << phy << ", "
+             << chem << ", "
+             << bio
+             << "\n";
+    }
+} void read_record()
+{
+
+     File pointer
+    fstream fin;
+
+     Open an existing file
+    fin.open("reportcard.csv", ios::in);
+
+     Get the roll number
+     of which the data is required
+    int rollnum, roll2, count = 0;
+    cout << "Enter the roll number "
+         << "of the student to display details: ";
+    cin >> rollnum;
+
+     Read the Data from the file
+     as String Vector
+    vector<string> row;
+    string line, word, temp;
+
+    while (fin >> temp) {
+
+        row.clear();
+
+         read an entire row and
+         store it in a string variable 'line'
+        getline(fin, line);
+
+        used for breaking words
+        stringstream s(line);
+
+         read every column data of a row and
+        store it in a string variable, 'word'
+        while (getline(s, word, ', ')) {
+
+             add all the column data
+             of a row to a vector
+            row.push_back(word);
+        }
+
+         convert string to integer for comparision
+        roll2 = stoi(row[0]);
+
+         Compare the roll number
+        if (roll2 == rollnum) {
+
+             Print the found data
+            count = 1;
+            cout << "Details of Roll " << row[0] << " : \n";
+            cout << "Name: " << row[1] << "\n";
+            cout << "Maths: " << row[2] << "\n";
+            cout << "Physics: " << row[3] << "\n";
+            cout << "Chemistry: " << row[4] << "\n";
+            cout << "Biology: " << row[5] << "\n";
+            break;
+        }
+    }
+    if (count == 0)
+        cout << "Record not found\n";
+} void update_recode()
+{
+
+     File pointer
+    fstream fin, fout;
+
+    Open an existing record
+    fin.open("reportcard.csv", ios::in);
+
+    Create a new file to store updated data
+    fout.open("reportcardnew.csv", ios::out);
+
+    int rollnum, roll1, marks, count = 0, i;
+    char sub;
+    int index, new_marks;
+    string line, word;
+    vector<string> row;
+
+    Get the roll number from the user
+    cout << "Enter the roll number "
+         << "of the record to be updated: ";
+    cin >> rollnum;
+
+    Get the data to be updated
+    cout << "Enter the subject "
+         << "to be updated(M/P/C/B): ";
+    cin >> sub;
+
+     Determine the index of the subject
+     where Maths has index 2,
+     Physics has index 3, and so on
+    if (sub == 'm' || sub == 'M')
+        index = 2;
+    else if (sub == 'p' || sub == 'P')
+        index = 3;
+    else if (sub == 'c' || sub == 'C')
+        index = 4;
+    else if (sub == 'b' || sub == 'B')
+        index = 5;
+    else {
+        cout << "Wrong choice.Enter again\n";
+        update_record();
+    }
+
+     Get the new marks
+    cout << "Enter new marks: ";
+    cin >> new_marks;
+
+     Traverse the file
+    while (!fin.eof()) {
+
+        row.clear();
+
+        getline(fin, line);
+        stringstream s(line);
+
+        while (getline(s, word, ', ')) {
+            row.push_back(word);
+        }
+
+        roll1 = stoi(row[0]);
+        int row_size = row.size();
+
+        if (roll1 == rollnum) {
+            count = 1;
+            stringstream convert;
+
+            sending a number as a stream into output string
+            convert << new_marks;
+
+             the str() converts number into string
+            row[index] = convert.str();
+
+            if (!fin.eof()) {
+                for (i = 0; i < row_size - 1; i++) {
+
+                     write the updated data
+                    /into a new file 'reportcardnew.csv'
+                     using fout
+                    fout << row[i] << ", ";
+                }
+
+                fout << row[row_size - 1] << "\n";
+            }
+        }
+        else {
+            if (!fin.eof()) {
+                for (i = 0; i < row_size - 1; i++) {
+
+                     writing other existing records
+                     into the new file using fout.
+                    fout << row[i] << ", ";
+                }
+
+                the last column data ends with a '\n'
+                fout << row[row_size - 1] << "\n";
+            }
+        }
+        if (fin.eof())
+            break;
+    }
+    if (count == 0)
+        cout << "Record not found\n";
+
+    fin.close();
+    fout.close();
+
+    removing the existing file
+    remove("reportcard.csv");
+
+    renaming the updated file with the existing file name
+    rename("reportcardnew.csv", "reportcard.csv");
+} void delete_record()                                    //
+{
+
+     Open FIle pointers
+    fstream fin, fout;
+
+    Open the existing file
+    fin.open("reportcard.csv", ios::in);
+
+     Create a new file to store the non-deleted data
+    fout.open("reportcardnew.csv", ios::out);
+
+    int rollnum, roll1, marks, count = 0, i;
+    char sub;
+    int index, new_marks;
+    string line, word;
+    vector<string> row;
+
+     Get the roll number
+     to decide the data to be deleted
+    cout << "Enter the roll number "
+         << "of the record to be deleted: ";
+    cin >> rollnum;
+
+     Check if this record exists
+     If exists, leave it and
+     add all other data to the new file
+    while (!fin.eof()) {
+
+        row.clear();
+        getline(fin, line);
+        stringstream s(line);
+
+        while (getline(s, word, ', ')) {
+            row.push_back(word);
+        }
+
+        int row_size = row.size();
+        roll1 = stoi(row[0]);
+
+        writing all records,
+        except the record to be deleted,
+        into the new file 'reportcardnew.csv'
+        using fout pointer
+        if (roll1 != rollnum) {
+            if (!fin.eof()) {
+                for (i = 0; i < row_size - 1; i++) {
+                    fout << row[i] << ", ";
+                }
+                fout << row[row_size - 1] << "\n";
+            }
+        }
+        else {
+            count = 1;
+        }
+        if (fin.eof())
+            break;
+    }
+    if (count == 1)
+        cout << "Record deleted\n";
+    else
+        cout << "Record not found\n";
+
+     Close the pointers
+    fin.close();
+    fout.close();
+
+    removing the existing file
+    remove("reportcard.csv");
+
+    renaming the new file with the existing file name
+    rename("reportcardnew.csv", "reportcard.csv");
+}
+
+ compare inserted term with the absent variable values
+contact* contactlist::findContacts(string search){
+	contact* x = NULL;
+	for( x = head1 ; x != NULL ; x = x -> next1)
+		if (x -> getname() == search || x -> getphone() == search || x -> getfamily() == ser || ( x -> getname() + " " + x -> getfamily() ) == search) {
+			return x;
+		}
+	return x;
+}
+real search in action
+contact* contactlist::fContacts(string ser){
+	contact* z = findContacts(search);
+	if (z == NULL){
+		cout << "\n\nNot found!" << endl;
+	}
+in case any contact is absent, it'll be shown
+	else {
+		cout << "\n\n------------------------------------" << endl;
+		z -> Contact();
+endl;
+	}
+	return z;
+}
+
+
+ delete feature                                                   //
+void contactlist::deleteContact(string search){
+	if (head1 -> getname() == search || head1 -> getfamily() == search || (head1 -> getname() + " " + head1 -> getfamily()) == search) {
+		contact* temp1 = head1 -> next1;
+ delete is an operator used to destroy array and non-array (pointers)
+objects
+		delete head1;
+		head1 = temp1;
+		size1--;
+		return;
+	}
+	contact* temp1 = head1;
+	if (temp1 -> next1 == NULL) {
+		 cout << "\n\nNot found!" << endl;
+		 return;
+	}
+	while(temp1 -> next1 -> getname() != search && temp1 -> next1 -> getfamily() != search && (head1 -> getfamily() + " " + head1 -> getfamily()) != search && temp1 != NULL){ 
+		temp1 = temp1 -> next1;
+		if ( temp1 -> next1 == NULL ) {
+			 cout << "\n\nNot found!" << endl;
+			 return;
+		};
+	}
+ delete the specified contact, and put another in it's leftover
+	if(temp1 != NULL){
+	contact* temp3 = temp1 -> next1;
+	temp1 -> next1 = temp3 -> next1;
+	delete temp3;
+
+	if( last1 -> getname() == search || last1 -> getfamily() == search || ( last1->getname() + " " + last1->getfamily() ) == search ) {
+		last1 = temp1;
+	}
+the list gets smaller by one each time we delete
+	size1--;
+	}
+ }
